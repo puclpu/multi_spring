@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#total{
+	height: 100%;
+}
+
+#top {
+	width:1008px;
+	height: 50px;
+	clear:both;
+	margin: 0 auto;
+	position: relative;
+	display:block;
+}
+
+#navigation {
+	width: 1008px;
+	height: 30px;
+	font-weight: bold;
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+	display:block;
+}
+
+#center {
+	width: 1008px;
+	min-height:800px;
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+	display:block;
+	padding: 10px;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding: 15px;
+}

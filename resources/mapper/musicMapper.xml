@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="music">
+	<select id="chart" resultType="musicVO">
+		select * from MUSIC order by hits DESC limit 100
+	</select>
+	<select id="one" parameterType="musicVO" resultType="musicVO">
+		select * from MUSIC where id = #{id}
+	</select>
+	<update id="update" parameterType="musicVO">
+		update MUSIC set hits = hits + 1 where id = #{id}
+	</update>
+	<select id="searchsinger" parameterType="String" resultType="musicVO">
+		select * from MUSIC WHERE singer LIKE '%'||#{singer}||'%'
+	</select>
+	<select id="searchtitle" parameterType="String" resultType="musicVO">
+		select * from MUSIC WHERE title LIKE '%'||#{title}||'%'
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
